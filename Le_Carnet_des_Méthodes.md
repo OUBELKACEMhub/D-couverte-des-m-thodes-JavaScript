@@ -4,9 +4,9 @@
 
 ### DÉFINITION :
 
-est une fonction cree un nouvaux tableau qui contient les element qui virifier le condition qui contient .
-ne change pas le tableaux principale ,il cree un neauveau tableau et le retiurner.
-ne execute pas sur les les element vide .
+Est une fonction qui crée un nouveau tableau contenant les éléments qui vérifient la condition fournie.
+Ne change pas le tableau principal, elle crée un nouveau tableau et le retourne.
+Ne s’exécute pas sur les éléments vides.
 
 #### synatxe:
 
@@ -14,33 +14,34 @@ array.filter(function(currentValue, index, arr), thisValue)
 
 ### PARAMÈTRES ACCEPTÉS :
 
--function(): (Required)
-A function to run for each array element.
+- function() (Required)
+  Une fonction à exécuter pour chaque élément du tableau.
 
--currentValue (Required)
-The value of the current element.
+- currentValue (Required)
+  La valeur de l’élément courant.
 
--index (Optional)
-The index of the current element.
+- index (Optional)
+  L’index de l’élément courant.
 
--arr (Optional)
-The array of the current element.
+- arr (Optional)
+  Le tableau de l’élément courant.
 
--thisValue (Optional) Default undefined
-A value passed to the function as its this value.
+- thisValue (Optional, Default undefined)
+  Une valeur passée à la fonction en tant que this.
 
 ### CE QU’ELLE RETOURNE :
 
-    tableau des elements qui virefier le condition.
-    tableau  vide si aucun element  virefier le condition.
+- Un tableau des éléments qui vérifient la condition.
+- Un tableau vide si aucun élément ne vérifie la condition.
 
 ### QUAND L’UTILISER :
 
-quant on doit selection les element qui verifier une condition quelqanque (comme une tri logique):
-Filtrer des données
-Sélectionner une partie d’un tableau
-Exclure certains éléments
-Nettoyer un tableau avant de l’utiliser
+Quand on doit sélectionner les éléments qui vérifient une condition quelconque (comme un tri logique) :
+
+- Filtrer des données
+- Sélectionner une partie d’un tableau
+- Exclure certains éléments
+- Nettoyer un tableau avant de l’utiliser
 
 ### LES ERREURS À ÉVITER:
 
