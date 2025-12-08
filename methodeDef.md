@@ -1,5 +1,6 @@
-<!-- Exemple pour .filter() :
-// SUR UN TABLEAU
+fonction .filter() :
+exemple:
+
 const étudiants = [
 { nom: “Alice”, note: 15, présent: true },
 { nom: “Bob”, note: 8, présent: false },
@@ -21,4 +22,3 @@ const configActives = Object.entries(config)
 .reduce((acc, [clé, valeur]) => ({ …acc, [clé]: valeur }), {});
 // Résultat attendu : {notifications: true}
 Attention ! Certaines méthodes ne fonctionnent pas directement sur les strings ou objets. Trouve des astuces !
- -->
