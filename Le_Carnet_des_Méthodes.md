@@ -14,19 +14,19 @@ array.filter(function(currentValue, index, arr), thisValue)
 
 ### PARAMÈTRES ACCEPTÉS :
 
-- function() (Required)
+- function() (Required) :
   Une fonction à exécuter pour chaque élément du tableau.
 
-- currentValue (Required)
+- currentValue (Required) :
   La valeur de l’élément courant.
 
-- index (Optional)
+- index (Optional) :
   L’index de l’élément courant.
 
-- arr (Optional)
+- arr (Optional) :
   Le tableau de l’élément courant.
 
-- thisValue (Optional, Default undefined)
+- thisValue (Optional, Default undefined) :
   Une valeur passée à la fonction en tant que this.
 
 ### CE QU’ELLE RETOURNE :
@@ -111,3 +111,6 @@ Quand on doit sélectionner les éléments qui vérifient une condition quelconq
 ### QUAND L’UTILISER :
 
 ### LES ERREURS À ÉVITER:
+
+###resources
+[w3schools.com/js](https://www.w3schools.com/js)
