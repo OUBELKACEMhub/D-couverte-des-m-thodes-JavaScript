@@ -112,5 +112,9 @@ Quand on doit sélectionner les éléments qui vérifient une condition quelconq
 
 ### LES ERREURS À ÉVITER:
 
-###resources
+### resources
+
+<br>
 [w3schools.com/js](https://www.w3schools.com/js)
+<br>
+[devdocs.io/javascript](https://devdocs.io/javascript/)
