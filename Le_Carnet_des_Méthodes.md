@@ -56,13 +56,38 @@ Quand on doit sélectionner les éléments qui vérifient une condition quelconq
 
 ### DÉFINITION :
 
+- La méthode map() des instances de tableau, crée un nouveau tableau rempli des résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant,
+  ou bien transformer un tableau en un autre tableau de même taille.
+
+### Syntaxe :
+
+let newArray = oldArray.map((element, index, array) => {
+// traitement
+});
+
 ### PARAMÈTRES ACCEPTÉS :
+
+- element
+- index(optional)
+- array(optional)
 
 ### CE QU’ELLE RETOURNE :
 
+- une nouveau tableau qui contient elements avec des valeurs sont celles retournées dans le callback
+
 ### QUAND L’UTILISER :
 
+1. Transformer chaque élément d’un tableau
+2. Créer un nouveau tableau basé sur l'ancien(Sans modifier le tableau original)
+3. Lorsque tu veux un tableau de même longueur
+
 ### LES ERREURS À ÉVITER:
+
+1. Croire que .map() fait un retour automatique lorsqu’on utilise des accolades.
+2. Utiliser .map() pour filtrer.
+3. Croire que .map() modifie le tableau original.
+4. Utiliser .map() sur une variable qui n’est pas un tableau.
+5. Croire que .map() retourne des types inattendus par erreur.
 
 ## 3-Foreach()
 
