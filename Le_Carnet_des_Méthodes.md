@@ -93,49 +93,124 @@ let newArray = oldArray.map((element, index, array) => {
 
 ### DÉFINITION :
 
+Exécute une fonction pour chaque élément du tableau.
+Ne crée pas de nouveau tableau — elle sert juste à parcourir et exécuter une action.
+
 ### PARAMÈTRES ACCEPTÉS :
+
+- currentValue
+- index (optional)
+- array (optional)
 
 ### CE QU’ELLE RETOURNE :
 
+- Rien (undefined)
+  Elle sert uniquement à effectuer des actions (log, modification externe, etc.)
+
 ### QUAND L’UTILISER :
 
+- Parcourir un tableau
+- Faire un console.log de chaque élément
+- Exécuter un traitement sans créer de tableau
+- Modifier l’extérieur (ex: push dans un autre tableau)
+
 ### LES ERREURS À ÉVITER:
+
+- Croire qu’elle retourne un tableau
+- Essayer de faire un return pour arrêter la boucle (ne marche pas)
+- L’utiliser pour filtrer ou transformer les données
+- Modifier le tableau original sans faire attention
 
 ## 4-find()
 
 ### DÉFINITION :
 
+Retourne le premier élément qui vérifie une condition.
+S’arrête dès qu’il trouve un match.
+
 ### PARAMÈTRES ACCEPTÉS :
+
+- element
+- index (optional)
+- array (optional)
 
 ### CE QU’ELLE RETOURNE :
 
+- Le premier élément qui vérifie la condition
+- undefined si aucun élément ne correspond
+
 ### QUAND L’UTILISER :
 
+- Trouver un élément précis dans un tableau
+- Chercher un objet selon une propriété
+- Récupérer le premier résultat valide
+
 ### LES ERREURS À ÉVITER:
+
+- Penser qu’elle retourne plusieurs éléments
+
+- Oublier que find() s’arrête dès le premier match
+
+- Confondre avec filter()
 
 ## 5-some()
 
 ### DÉFINITION :
 
+Teste si au moins un élément du tableau vérifie la condition.
+
 ### PARAMÈTRES ACCEPTÉS :
+
+- element
+- index (optional)
+- array (optional)
 
 ### CE QU’ELLE RETOURNE :
 
+- "true" si un élément satisfait la condition
+
+- "false" sinon
+
 ### QUAND L’UTILISER :
 
+- Vérifier si une condition est vraie au moins une fois
+- Tester la présence d’un élément
+- Vérifier une règle rapide (ex : âge > 18 existe ?)
+
 ### LES ERREURS À ÉVITER:
+
+- Croire qu’elle retourne l’élément (elle retourne un booléen)
+- La confondre avec every()
+- Utiliser some() pour récupérer les valeurs
 
 ## 6-every()
 
 ### DÉFINITION :
 
+Teste si tous les éléments du tableau vérifient la condition.
+
 ### PARAMÈTRES ACCEPTÉS :
+
+- element
+- index (optional)
+- array (optional)
 
 ### CE QU’ELLE RETOURNE :
 
+"true" si tous les éléments satisfont la condition
+"false" si un seul ne la satisfait pas
+
 ### QUAND L’UTILISER :
 
+1. Vérifier que toute la liste respecte une règle
+2. Valider des données (ex : tous les champs remplis ?)
+3. Vérifier une contrainte générale
+
 ### LES ERREURS À ÉVITER:
+
+- La confondre avec some()
+- Penser qu’elle retourne les éléments
+- Oublier que si un seul élément échoue → false immédiat
 
 ### Resources
 
