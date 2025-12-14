@@ -217,7 +217,40 @@ Teste si tous les éléments du tableau vérifient la condition.
 const étudiants = [ { nom: "Alice", note: 15, présent: true },
 { nom: "Bob", note: 8, présent: false }, { nom: "Charlie", note: 18, présent: true } ];
 
-## 1.map()
+## filter()
+
+### SUR UN TABLEAU:
+
+```
+const présents = étudiants.filter(étudiant => étudiant.présent);
+
+```
+
+// Résultat attendu : [{Alice}, {Charlie}]
+
+### SUR UNE STRING
+
+```
+const phrase = “Je suis développeur web”;
+// Mon code :
+const motsLongs = phrase.split(’ ').filter(mot => mot.length > 3);
+// Résultat attendu : [“suis”, “développeur”]
+
+```
+
+### SUR UN OBJET
+
+```
+const config = { theme: “dark”, lang: “fr”, notifications: true };
+// Mon code :
+const configActives = Object.entries(config)
+.filter(([clé, valeur]) => valeur === true)
+.reduce((acc, [clé, valeur]) => ({ …acc, [clé]: valeur }), {});
+// Résultat attendu : {notifications: true}
+
+```
+
+## map()
 
 ### SUR UN TABLEAU:
 
@@ -229,11 +262,15 @@ const noms = étudiants.map(e => e.nom);
 
 ### 2.SUR UNE STRING
 
+const phrase = "Je suis développeur web";
+
 ```
 const majuscules = phrase
   .split(' ')
   .map(mot => mot.toUpperCase());
 ```
+
+// Résultat attendu : ["JE", "SUIS", "DÉVELOPPEUR", "WEB"]
 
 ### 3.SUR UN OBJET
 
@@ -243,7 +280,85 @@ const configUpper = Object.entries(config)
   .reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {});
 ```
 
-// Résultat attendu : ["JE", "SUIS", "DÉVELOPPEUR", "WEB"]
+## 2. find()
+
+### SUR UN TABLEAU:
+
+```
+const bob = étudiants.find(e => e.nom === "Bob");
+```
+
+### SUR UNE STRING:
+
+```
+const motLong = phrase.split(' ').find(m => m.length > 5);
+```
+
+### 3.SUR UN OBJET
+
+```
+const found = Object.entries(config).find(([_, v]) => v === true);
+```
+
+## split()
+
+### SUR UN TABLEAU:
+
+```
+phrase.split(' ');
+```
+
+### SUR UNE CSV:
+
+```
+"HTML,CSS,JS".split(',');
+```
+
+### 3.SUR characteres
+
+```
+"Hello".split('');
+```
+
+## some()
+
+### SUR UN TABLEAU:
+
+```
+const auMoinsUnAbsent = étudiants.some(e => e.présent === false);
+```
+
+### SUR UNE STRING:
+
+```
+const contientWeb = phrase.split(' ').some(m => m === "web");
+```
+
+### 3.SUR UN OBJET
+
+```
+const hasTrue = Object.values(config).some(v => v === true);
+```
+
+## every()
+
+### SUR UN TABLEAU:
+
+```
+const tousPresents = étudiants.every(e => e.présent === true);
+```
+
+### SUR UNE STRING:
+
+```
+const tousLongs = phrase.split(' ').every(m => m.length > 2);
+```
+
+### 3.SUR UN OBJET
+
+```
+const allBool = Object.values(config).every(v => typeof v === "boolean");
+```
 
 ### Resources
 
