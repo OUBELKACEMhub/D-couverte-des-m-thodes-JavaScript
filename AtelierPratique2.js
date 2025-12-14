@@ -1,33 +1,5 @@
-<!-- // PHASE 2 : Le Laboratoire
-// Atelier Pratique - Niveau 1
-// // DONNÉES DE DÉPART
-const produits = [
-{ id: 1, nom: “Ordinateur”, prix: 999, catégorie: “électronique”, stock: 5 },
-{ id: 2, nom: “T-shirt”, prix: 25, catégorie: “vêtement”, stock: 0 },
-{ id: 3, nom: “Livre JS”, prix: 35, catégorie: “livre”, stock: 12 }
-];
-// TES MISSIONS :
-// 1. Trouve tous les produits en stock (stock > 0)
-// 2. Calcule le prix total de tous les produits
-// 3. Crée un tableau des noms de produits en majuscules
-// 4. Vérifie si tous les produits coûtent plus de 20€
-// 5. Trouve le produit avec l’id 2
-// 6. Ajoute un nouveau produit à la fin
-// 7. Enlève le premier produit
-// 8. Trie les produits par prix (croissant) -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    heelo
 
-</body>
-<script>
-    const produits = [
+const produits = [
 { id: 1, nom: "Ordinateur", prix: 9, catégorie: "électronique", stock: 5 },
 { id: 2, nom: "T-shirt", prix: 25, catégorie: "vêtement", stock: 0 },
 { id: 3, nom: "Livre JS", prix: 35, catégorie: "ivre", stock: 12 }
@@ -114,29 +86,3 @@ console.log(produits)
  }
 triParPrix()
 console.log(produits)
-</script>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
