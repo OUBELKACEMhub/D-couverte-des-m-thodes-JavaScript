@@ -1,25 +1,22 @@
-// CHALLENGE 1 : Les 3 Visages d’une Méthode
-// Pour chaque méthode, trouve 3 utilisations différentes :
-// Exemple pour .filter() :
-// // SUR UN TABLEAU
-// const étudiants = [
-// { nom: “Alice”, note: 15, présent: true },
-// { nom: “Bob”, note: 8, présent: false },
-// { nom: “Charlie”, note: 18, présent: true }
-// ];
-// // Mon code :
-// const présents = étudiants.filter(étudiant => étudiant.présent);
-// // Résultat attendu : [{Alice}, {Charlie}]
-// // SUR UNE STRING
-// const phrase = “Je suis développeur web”;
-// // Mon code :
-// const motsLongs = phrase.split(’ ').filter(mot => mot.length > 3);
-// // Résultat attendu : [“suis”, “développeur”]
-// // SUR UN OBJET
-// const config = { theme: “dark”, lang: “fr”, notifications: true };
-// // Mon code :
-// const configActives = Object.entries(config)
-// .filter(([clé, valeur]) => valeur === true)
-// .reduce((acc, [clé, valeur]) => ({ …acc, [clé]: valeur }), {});
-// // Résultat attendu : {notifications: true}
-// Attention ! Certaines méthodes ne fonctionnent pas directement sur les strings ou objets. Trouve des astuces !
+** Atelier Pratique - Niveau 2 (Expert)**
+// SIMULATEUR DE PANIER D’ACHAT
+const panier = [];
+const catalogue = [
+{ id: “A1”, nom: “Pomme”, prix: 1.5, promo: false },
+{ id: “A2”, nom: “Banane”, prix: 2, promo: true },
+{ id: “B1”, nom: “Lait”, prix: 3.5, promo: false }
+];
+// TON DÉFI : Crée ces fonctions
+function ajouterAuPanier(idProduit, quantité) {
+// trouver le produit
+// l’ajouter au panier
+}
+function calculerTotal() {
+// calculer le total
+}
+function appliquerPromotion() {
+// appliquer 10% de réduction sur les produits en promo
+}
+function produitsChers(seuil) {
+// trouver les produits au-dessus du seuil
+}
