@@ -212,6 +212,39 @@ Teste si tous les éléments du tableau vérifient la condition.
 - Penser qu’elle retourne les éléments
 - Oublier que si un seul élément échoue → false immédiat
 
+# Atelier Pratique - Niveau 2 (Expert)
+
+const étudiants = [ { nom: "Alice", note: 15, présent: true },
+{ nom: "Bob", note: 8, présent: false }, { nom: "Charlie", note: 18, présent: true } ];
+
+## 1.map()
+
+### SUR UN TABLEAU:
+
+```
+const noms = étudiants.map(e => e.nom);
+```
+
+// Résultat attendu : ["Alice", "Bob", "Charlie"]
+
+### 2.SUR UNE STRING
+
+```
+const majuscules = phrase
+  .split(' ')
+  .map(mot => mot.toUpperCase());
+```
+
+### 3.SUR UN OBJET
+
+```
+const configUpper = Object.entries(config)
+  .map(([k, v]) => [k, String(v).toUpperCase()])
+  .reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {});
+```
+
+// Résultat attendu : ["JE", "SUIS", "DÉVELOPPEUR", "WEB"]
+
 ### Resources
 
 - [W3Schools JavaScript](https://www.w3schools.com/js)
