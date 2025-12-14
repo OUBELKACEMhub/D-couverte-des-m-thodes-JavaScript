@@ -234,9 +234,9 @@ const présents = étudiants.filter(étudiant => étudiant.présent);
 const phrase = “Je suis développeur web”;
 // Mon code :
 const motsLongs = phrase.split(’ ').filter(mot => mot.length > 3);
-// Résultat attendu : [“suis”, “développeur”]
-
 ```
+
+// Résultat attendu : [“suis”, “développeur”]
 
 ### SUR UN OBJET
 
@@ -246,9 +246,10 @@ const config = { theme: “dark”, lang: “fr”, notifications: true };
 const configActives = Object.entries(config)
 .filter(([clé, valeur]) => valeur === true)
 .reduce((acc, [clé, valeur]) => ({ …acc, [clé]: valeur }), {});
-// Résultat attendu : {notifications: true}
 
 ```
+
+// Résultat attendu : {notifications: true}
 
 ## map()
 
@@ -280,6 +281,8 @@ const configUpper = Object.entries(config)
   .reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {});
 ```
 
+// Résultat attendu : { theme: "DARK", lang: "FR", notifications: "TRUE" }
+
 ## 2. find()
 
 ### SUR UN TABLEAU:
@@ -288,17 +291,23 @@ const configUpper = Object.entries(config)
 const bob = étudiants.find(e => e.nom === "Bob");
 ```
 
+// Résultat attendu :{ nom: "Bob", note: 8, présent: false }
+
 ### SUR UNE STRING:
 
 ```
 const motLong = phrase.split(' ').find(m => m.length > 5);
 ```
 
+// Résultat attendu :"développeur"
+
 ### 3.SUR UN OBJET
 
 ```
 const found = Object.entries(config).find(([_, v]) => v === true);
 ```
+
+// Résultat attendu :["notifications", true]
 
 ## split()
 
@@ -308,17 +317,23 @@ const found = Object.entries(config).find(([_, v]) => v === true);
 phrase.split(' ');
 ```
 
+// Résultat attendu :["Je", "suis", "développeur", "web"]
+
 ### SUR UNE CSV:
 
 ```
 "HTML,CSS,JS".split(',');
 ```
 
+// Résultat attendu :["HTML", "CSS", "JS"]
+
 ### 3.SUR characteres
 
 ```
 "Hello".split('');
 ```
+
+// Résultat attendu :["H", "e", "l", "l", "o"]
 
 ## some()
 
@@ -328,17 +343,23 @@ phrase.split(' ');
 const auMoinsUnAbsent = étudiants.some(e => e.présent === false);
 ```
 
+// Résultat attendu :true
+
 ### SUR UNE STRING:
 
 ```
 const contientWeb = phrase.split(' ').some(m => m === "web");
 ```
 
+// Résultat attendu :true
+
 ### 3.SUR UN OBJET
 
 ```
 const hasTrue = Object.values(config).some(v => v === true);
 ```
+
+// Résultat attendu :true
 
 ## every()
 
@@ -348,17 +369,23 @@ const hasTrue = Object.values(config).some(v => v === true);
 const tousPresents = étudiants.every(e => e.présent === true);
 ```
 
+// Résultat attendu :false
+
 ### SUR UNE STRING:
 
 ```
 const tousLongs = phrase.split(' ').every(m => m.length > 2);
 ```
 
+// Résultat attendu :true
+
 ### 3.SUR UN OBJET
 
 ```
 const allBool = Object.values(config).every(v => typeof v === "boolean");
 ```
+
+// Résultat attendu :false
 
 ### Resources
 
