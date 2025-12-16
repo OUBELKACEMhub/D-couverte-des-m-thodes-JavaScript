@@ -9,9 +9,9 @@ Ne change pas le tableau principal, elle crée un nouveau tableau et le retourne
 Ne s’exécute pas sur les éléments vides.
 
 #### synatxe:
-
+```
 array.filter(function(currentValue, index, arr), thisValue)
-
+```
 ### PARAMÈTRES ACCEPTÉS :
 
 - function() (Required) :
@@ -60,11 +60,11 @@ Quand on doit sélectionner les éléments qui vérifient une condition quelconq
   ou bien transformer un tableau en un autre tableau de même taille.
 
 ### Syntaxe :
-
+```
 let newArray = oldArray.map((element, index, array) => {
 // traitement
 });
-
+```
 ### PARAMÈTRES ACCEPTÉS :
 
 - element
@@ -212,11 +212,80 @@ Teste si tous les éléments du tableau vérifient la condition.
 - Penser qu’elle retourne les éléments
 - Oublier que si un seul élément échoue → false immédiat
 
-# Atelier Pratique - Niveau 2 (Expert)
+ ## 7-split()
 
+### DÉFINITION :
+
+Est une méthode qui **divise une chaîne de caractères** en plusieurs parties et **retourne un tableau**, en utilisant un séparateur donné.
+Elle **ne modifie pas la chaîne originale**.
+
+---
+
+### syntaxe :
+
+```js
+string.split(separator, limit)
+```
+
+
+### PARAMÈTRES ACCEPTÉS :
+
+* **separator** (Required) :
+  Le caractère, la chaîne ou l’expression régulière utilisée pour séparer la chaîne.
+  Exemples : `" "`, `","`, `"-"`.
+
+* **limit** (Optional) :
+  Un nombre qui définit le **nombre maximum d’éléments** retournés dans le tableau.
+
+
+### CE QU’ELLE RETOURNE :
+
+* Un **tableau** contenant les parties de la chaîne séparées.
+* Si le séparateur n’est pas trouvé → un tableau avec **la chaîne complète**.
+* Si le séparateur est une chaîne vide `""` → un tableau de **chaque caractère**.
+
+
+
+### QUAND L’UTILISER :
+
+Quand on doit **transformer une chaîne en tableau**, par exemple :
+
+* Découper une phrase en mots
+* Séparer des données venant d’un input ou d’une base de données
+* Traiter un CSV simple
+* Manipuler une date ou une URL
+
+---
+
+### EXEMPLES :
+
+```js
+"Bonjour le monde".split(" ");
+// ["Bonjour", "le", "monde"]
+
+"2025-12-16".split("-");
+// ["2025", "12", "16"]
+
+"abc".split("");
+// ["a", "b", "c"]
+```
+
+---
+
+### LES ERREURS À ÉVITER :
+
+* Croire que `split()` modifie la chaîne originale
+* Utiliser un mauvais séparateur
+* Oublier que `split()` retourne toujours un tableau
+* Utiliser `split()` sur un nombre sans le convertir en string
+* Confondre `split()` avec `slice()` ou `su
+ 
+
+# Atelier Pratique - Niveau 2 (Expert)
+```
 const étudiants = [ { nom: "Alice", note: 15, présent: true },
 { nom: "Bob", note: 8, présent: false }, { nom: "Charlie", note: 18, présent: true } ];
-
+```
 ## filter()
 
 ### SUR UN TABLEAU:
